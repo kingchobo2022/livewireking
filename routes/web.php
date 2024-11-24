@@ -2,6 +2,7 @@
 
 use App\Livewire\CreateCustomer;
 use App\Livewire\Customers;
+use App\Livewire\ViewCustomers;
 use Illuminate\Support\Facades\Route;
 
 Route::get('/', function () {
@@ -10,3 +11,4 @@ Route::get('/', function () {
 
 Route::get('customers/create', CreateCustomer::class);
 Route::get('customers', Customers::class);
+Route::get('customers/view/{id}', ViewCustomers::class);
