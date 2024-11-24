@@ -9,7 +9,6 @@
     </head>
     <body>
         <div class="container mt-5">{{ $slot }}
-            <button class="btn btn-primary">버튼</button>
         </div>
     </body>
 </html>
