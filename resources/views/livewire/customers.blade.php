@@ -23,7 +23,7 @@
             <td>
                 <button wire:navigate href="/customers/view/{{ $customer->id }}" class="btn btn-primary btn-sm">View</button>
                 <button wire:navigate href="/customers/edit/{{ $customer->id }}" class="btn btn-secondary btn-sm">Edit</button>
-                <button class="btn btn-danger btn-sm">Delete</button>
+                <button wire:click="deleteCustomer({{ $customer->id }})" class="btn btn-danger btn-sm">Delete</button>
             </td>
         </tr>
         @endforeach

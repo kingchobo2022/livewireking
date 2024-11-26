@@ -16,4 +16,11 @@ class Customers extends Component
     {
         return view('livewire.customers');
     }
+
+    public function deleteCustomer(User $id)
+    {
+        $id->delete();
+        session()->flash('success', '고객 정보가 삭제되었습니다.');
+        return $this->redirect('/customers', navigate:true);
+    }
 }
