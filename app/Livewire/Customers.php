@@ -3,6 +3,7 @@
 namespace App\Livewire;
 
 use App\Models\User;
+// use Illuminate\Support\Facades\Auth;
 use Livewire\Component;
 
 class Customers extends Component
@@ -14,6 +15,7 @@ class Customers extends Component
     }
     public function render()
     {
+        // dd(Auth::user()->name);
         return view('livewire.customers');
     }
 
