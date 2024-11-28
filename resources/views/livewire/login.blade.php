@@ -1,27 +1,9 @@
 <div class="card offset-3 col-6">
     <div class="card-header">
-        유저 등록
+        로그인
     </div>
     <div class="card-body">
-        <form wire:submit="storeUser">
-            <div class="mb-3">
-                <label class="form-label">이름</label>
-                <input wire:model="name" type="text" class="form-control">
-                <div>
-                    @error('name')
-                      <span class="text-danger">{{ $message }}</span>
-                    @enderror
-                </div>
-            </div>
-            <div class="mb-3">
-                <label class="form-label">전화번호</label>
-                <input wire:model="phone" type="text" class="form-control">
-                <div>
-                    @error('phone')
-                      <span class="text-danger">{{ $message }}</span>
-                    @enderror
-                </div>
-            </div>
+        <form wire:submit="loginUser">
             <div class="mb-3">
                 <label class="form-label">이메일</label>
                 <input wire:model="email" type="email" class="form-control">
@@ -44,7 +26,7 @@
         </form>
     </div>
     <div class="card-footer text-body-secondary">
-        이미 존재하는 계정입니다
-        <button class="btn btn-success ms-1" wire:navigate href="/login">로그인</button>
+        새로운 계정 생성
+        <button class="btn btn-success ms-1" wire:navigate href="/register">유저생성</button>
     </div>
 </div>
