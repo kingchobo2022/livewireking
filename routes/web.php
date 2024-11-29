@@ -20,4 +20,4 @@ Route::middleware('auth')->group(function(){
 });
 
 Route::get('register', Register::class);
-Route::get('login', Login::class);
+Route::get('login', Login::class)->name('login');
